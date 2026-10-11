@@ -65,9 +65,14 @@ No confirmed exploitable web vulnerability is claimed based on these checks alon
 - Avoid exposing authentication tokens, cookies, or other sensitive request data in public reports.
 - Continue testing only within authorized lab environments and document evidence for each confirmed finding.
 
-## 7. Conclusion
+## 7. Supporting Evidence
 
-This assessment supports practical learning in network security analysis, web application security, and defensive security reporting.
+- **Network Security Analysis (Task 2):** [View Wireshark Analysis Report](PASTE_YOUR_PDF_URL_HERE)
+- **Web Security Review (Task 3):** Conducted in a local OWASP Juice Shop environment. Observations and recommendations are documented in this report.
+
+## 8. Conclusion
+
+This assessment provided practical experience in network traffic analysis and web application security review using authorized educational tools. The report records observed results and recommends further verification where the available evidence is insufficient to confirm a vulnerability.
 
 ## Disclaimer
 
