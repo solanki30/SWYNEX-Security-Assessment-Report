@@ -28,9 +28,42 @@ This project documents a defensive security assessment conducted as part of cybe
 
 Testing was performed in a controlled environment using authorized tools and a local training application. Findings will be documented based on observed evidence and verified results.
 
-## 6. Security Findings
+### 6. Security Assessment Findings
 
-Detailed findings, evidence, risk ratings, and remediation recommendations will be added after reviewing the results of the tests performed.
+#### 6.1 Network Traffic Analysis — Task 2
+
+**Tool:** Wireshark
+
+Network traffic was inspected in a controlled environment. The analysis included DNS, TCP, UDP, QUIC, TLS 1.2/1.3, TCP SYN packets, duplicate acknowledgements, and fast retransmissions.
+
+These observations helped demonstrate protocol identification and basic network troubleshooting. The presence of these packet types alone does not establish malicious activity. No unverified security incident is claimed in this report.
+
+#### 6.2 Web Application Review — Task 3
+
+**Application:** OWASP Juice Shop  
+**Environment:** Local training application (`localhost:3000`)  
+**Tools:** Browser Developer Tools — Network panel
+
+**Observed results:**
+- A product search API request used the `GET` method and returned HTTP `200 OK`.
+- The response contained JSON product data.
+- `X-Content-Type-Options: nosniff` was observed.
+- `X-Frame-Options: SAMEORIGIN` was observed.
+- `Content-Security-Policy` and `Strict-Transport-Security` were not observed in the inspected response.
+
+**Assessment notes:**
+
+The successful API response and JSON product data were normal observations and do not independently demonstrate a vulnerability. The absence of a Content-Security-Policy header in the inspected response is a potential security-hardening concern that requires further verification across relevant application responses. The absence of Strict-Transport-Security on the inspected local HTTP response is not, by itself, evidence of a vulnerability.
+
+No confirmed exploitable web vulnerability is claimed based on these checks alone.
+
+#### 6.3 Recommendations
+
+- Review security headers across relevant application responses.
+- Configure an appropriate Content Security Policy after testing application compatibility.
+- Use HTTPS in production and configure HSTS where applicable.
+- Avoid exposing authentication tokens, cookies, or other sensitive request data in public reports.
+- Continue testing only within authorized lab environments and document evidence for each confirmed finding.
 
 ## 7. Conclusion
 
