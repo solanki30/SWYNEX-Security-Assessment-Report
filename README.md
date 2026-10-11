@@ -67,7 +67,7 @@ No confirmed exploitable web vulnerability is claimed based on these checks alon
 
 ## 7. Supporting Evidence
 
-- **Network Security Analysis (Task 2):** [View Wireshark Analysis Report](PASTE_YOUR_PDF_URL_HERE)
+- **Network Security Analysis (Task 2):** [View Wireshark Analysis Report](https://github.com/solanki30/SWYNEX-Network-Security-Analysis/blob/main/SWYNEX_Network_Security_Analysis_Report.pdf))
 - **Web Security Review (Task 3):** Conducted in a local OWASP Juice Shop environment. Observations and recommendations are documented in this report.
 
 ## 8. Conclusion
